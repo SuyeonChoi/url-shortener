@@ -8,6 +8,7 @@ import lombok.Getter;
 
 @Getter
 public class UrlRequest {
+	@URL
 	private String originUrl;
 
 	public Url toUrl() {

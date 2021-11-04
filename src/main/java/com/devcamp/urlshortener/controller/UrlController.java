@@ -26,7 +26,7 @@ public class UrlController {
 	public ResponseEntity<String> shortenUrl(@RequestBody @Valid UrlRequest urlRequest) {
 		String response = urlService.shortenUrl(urlRequest);
 		log.info("[encoded URL] " + response);
-		
+
 		return ResponseEntity.ok(response);
 	}
 }
