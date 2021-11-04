@@ -10,7 +10,7 @@
         <h1>URL Shortener</h1>
 
         <div id="inputDiv">
-            <input type="text" id="originUrl" name="originUrl" placeholder="url 입력">
+            <input type="text" id="originUrl" name="originUrl" placeholder="url 입력" size="150">
             <input value="SHORTEN!" type="button" onclick="getResult()">
         </div>
 
@@ -35,7 +35,7 @@
             $("#result").empty();
             $("#result").append(response);
         }).fail(function() {
-            let response = "<p>변환 실패</p>";
+            let response = "<p>[변환 실패] URL 형식으로 입력해야합니다.</p>";
             $("#result").empty();
             $("#result").append(response);
         })
