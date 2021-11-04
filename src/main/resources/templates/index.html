@@ -31,8 +31,7 @@
             contentType: 'application/json; charset=utf-8',
             dataType: "text"
         }).done(function(data) {
-            console.log(data);
-            let response = "<p>shorten url: " + data +"</p>";
+            let response = "<p>shorten url: <a href=" + data +" target='_blank'>" + data +"</a></p>";
             $("#result").empty();
             $("#result").append(response);
         }).fail(function() {
