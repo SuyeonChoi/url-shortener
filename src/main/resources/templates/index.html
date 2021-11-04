@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>URL Shortener</h1>
+
+        <div id="inputDiv">
+            <input type="text" id="originUrl" name="originUrl" placeholder="url 입력">
+            <input value="SHORTEN!" type="button" onclick="getResult()">
+        </div>
+
+        <div id="result">
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    function getResult() {
+        var data = { originUrl: $("#originUrl").val() }
+
+        $.ajax({
+            url: "/api/shorten",
+            data: JSON.stringify(data),
+            type:"POST",
+            contentType: 'application/json; charset=utf-8',
+            dataType: "text"
+        }).done(function(data) {
+            console.log(data);
+            let response = "<p>shorten url: " + data +"</p>";
+            $("#result").empty();
+            $("#result").append(response);
+        }).fail(function() {
+            let response = "<p>변환 실패</p>";
+            $("#result").empty();
+            $("#result").append(response);
+        })
+    }
+</script>
+</html>
