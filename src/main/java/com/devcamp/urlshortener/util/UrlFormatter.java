@@ -11,7 +11,6 @@ public class UrlFormatter {
 	@Value("${server.host}")
 	private String host;
 
-
 	public String format(String encoded) {
 		return "http://" + host + ":" + port + "/" + encoded;
 	}
