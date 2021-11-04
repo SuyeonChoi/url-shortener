@@ -1,0 +1,14 @@
+sever:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/devcamp?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+    username: smilegate
+    password: smilegate
+
+  jpa:
+    show-sql: true
+    hibernate:
+      format-sql: true
