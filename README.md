@@ -28,3 +28,10 @@ cd market
 
 ## Preview
 <img width="1311" alt="preview" src="https://user-images.githubusercontent.com/28749734/140438718-39e35852-1699-4bae-bc2e-133970cdf6a3.png">
+
+<br>
+
+## 기록
+https://suyeonchoi.tistory.com/62
+
+
